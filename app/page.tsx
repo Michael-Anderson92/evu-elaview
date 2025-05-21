@@ -166,13 +166,13 @@ export default function Home() {
         <section className="Testimonials">
           <h2>What Our Users Say</h2>
           <p className="Subtitle">
-            Hear from property owners and advertisers who've transformed their businesses with Elaview.
+            Hear from property owners and advertisers who&apos;ve transformed their businesses with Elaview.
           </p>
           <div className="Cards">
             {[
               {
                 stars: 5,
-                quote: "Elaview has transformed how we monetize our building's exterior. We've seen a 40% increase in revenue from previously unused wall space.",
+                quote: "Elaview has transformed how we monetize our building&apos;s exterior. We've seen a 40% increase in revenue from previously unused wall space.",
                 name: "Sarah Johnson",
                 title: "Property Manager, SoHo Heights",
                 avatar: "/images/profile5.png"
@@ -186,7 +186,7 @@ export default function Home() {
               },
               {
                 stars: 4,
-                quote: "Our building facades were just sitting there. Now they're generating significant passive income through Elaview's platform.",
+                quote: "Our building facades were just sitting there. Now they&apos;re generating significant passive income through Elaview&apos;s platform.",
                 name: "David Rodriguez",
                 title: "Owner, Brooklyn Properties LLC",
                 avatar: "/images/profile7.png"
@@ -194,7 +194,7 @@ export default function Home() {
             ].map((card, idx) => (
               <div className="TestimonialCard" key={idx}>
                 <div className="Stars">{'⭐️'.repeat(card.stars)}{'☆'.repeat(5 - card.stars)}</div>
-                <p className="Quote">"{card.quote}"</p>
+                <p className="Quote">&quot;{card.quote}&quot;</p>
                 <div className="User">
                   <Image src={card.avatar} alt={card.name} className="Avatar" width={50} height={50} />
                   <div>
@@ -211,7 +211,7 @@ export default function Home() {
       <div className="HeroSection">
         <div className="HeroContent">
           <div className="HeroText">
-            <h1>Ready to Transform NYC's Advertising Landscape?</h1>
+            <h1>Ready to Transform NYC&apos;s Advertising Landscape?</h1>
             <p>
               Whether you own prime real estate or need impactful advertising space, Pinpoint connects you to the right opportunities.
             </p>

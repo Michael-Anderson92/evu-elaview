@@ -67,8 +67,8 @@ export default function BrowseSpace() {
     const availability: string[] = ["Available Now"]
 
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let value = event.target.value;
-        let isChecked = event.target.checked;
+        const value = event.target.value;
+        const isChecked = event.target.checked;
 
         if (isChecked) {
             setselectedNeighborhoods(([...selectedNeighborhoods, value]));
@@ -79,8 +79,8 @@ export default function BrowseSpace() {
     }
 
     const handleCheckboxChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let value = event.target.value;
-        let isChecked = event.target.checked;
+        const value = event.target.value;
+        const isChecked = event.target.checked;
 
         if (isChecked) {
             setselectedspaceTypes(([...selectedspaceTypes, value]));
@@ -91,8 +91,8 @@ export default function BrowseSpace() {
     }
 
     const handleCheckboxChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let value = event.target.value;
-        let isChecked = event.target.checked;
+        const value = event.target.value;
+        const isChecked = event.target.checked;
 
         if (isChecked) {
             setselectedTraffic(([...selectedTraffic, value]));
@@ -103,7 +103,7 @@ export default function BrowseSpace() {
     }
 
     const handleCheckboxChang3 = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let isChecked = event.target.checked;
+        const isChecked = event.target.checked;
 
         if (isChecked) {
             setselectedAvailability([...selectedAvailability, 'Immediately']);
@@ -131,7 +131,7 @@ export default function BrowseSpace() {
     const areFiltersActive = selectedNeighborhoods.length > 0 || selectedspaceTypes.length > 0 || selectedTraffic.length > 0 ||
         selectedAvailability.length > 0 || priceRange[0] !== 1000 || priceRange[1] !== 15000 || minWidth > 0 || minHeight > 0 || calendarDate !== null;
 
-    let itemsperPage = 8;
+    const itemsperPage = 8;
     const itemsToDisplay = areFiltersActive ? filteredItems : products;
     const totalPages = Math.ceil(itemsToDisplay.length / itemsperPage);
 
@@ -139,7 +139,7 @@ export default function BrowseSpace() {
     const endIndex = startIndex + itemsperPage;
     const currentPageItems = itemsToDisplay.slice(startIndex, endIndex);
 
-    let pageNumbers: number[] = [];
+    const pageNumbers: number[] = [];
 
     for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i)
@@ -233,7 +233,7 @@ export default function BrowseSpace() {
                     </ListSubheader>
 
                     <Collapse in={open6} sx={{ px: 2 }}>
-                        <Slider value={priceRange} onChange={(_: any, newValue: number[]) => setPriceRange(newValue)} valueLabelDisplay="off" min={1000} max={15000}
+                        <Slider value={priceRange} onChange={(_, newValue: number[]) => setPriceRange(newValue)} valueLabelDisplay="off" min={1000} max={15000}
                             step={500} sx={{ color: 'black', '& .MuiSlider-thumb': { backgroundColor: 'black' } }} />
 
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 1 }}>
